@@ -7,10 +7,11 @@ This document is a security review of Deriswap.
 Timeline: 26/11/20 - 29/11/20
 
 Auditors:
-
 Ed Zulkoski, Senior Research Engineer
 Shunsuke Tokoshima, Blockchain Researcher
 Joseph Xu, Technical R&D Advisor
+
+
 2. In scope
 Commit: b3672d93
 
