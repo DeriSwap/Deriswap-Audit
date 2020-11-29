@@ -3,6 +3,7 @@
 Join telegram channel for audit updates : <br>
 https://t.me/DeriswapOfficial
 <br>
+<br>
 Deriswap Security Review<br>
 <br>
 <br>
@@ -25,11 +26,9 @@ For deriswapv1/*, we only considered the diff as specified in deriswapv1/README.
 Documentation: Deriswap Medium Article<br>
 <br>
 3. Findings<br>
-** 10 ** were reported including:<br>
-
-3 low risk issues;<br>
-5 informational.<br>
+<br>
 No critical or high risk issues were found. Although we provide some recommendations for fixes below, since the contracts are already deployed, these are primarily for informational purposes. No found issues were critical enough to suggest re-deployment of the existing contracts, however caution should be used when using them.<br>
+<br>
 <br>
 3.1. add() does not prevent the same LP token from being added more than once
 Severity: Low
@@ -65,7 +64,7 @@ The values for user.amount and user.rewardDebt are not zeroed until after the ex
 Recommendation<br>
 In general we recommend following the checks-effects-interactions pattern. Zero out the user's state variables prior to the external safeTransfer() call (ensuring the correct amount is still passed in safeTransfer() using a local variable).<br>
 <br>
-3.9. Missing constructor checks<br>
+3.5. Missing constructor checks<br>
 Severity: Informational<br>
 Contract(s) affected: Maker.sol, Swap.sol, Migrator.sol<br>
 Description<br>
@@ -74,7 +73,7 @@ In the constructors for Maker.sol, Swap.sol, and Migrator.sol, the address param
 Recommendation<br>
 In general we recommend ensuring that address arguments are non-zero in constructor and setter functions in order to mitigate deployment issues.<br>
 
-3.10. Unlocked dependency version<br>
+3.6. Unlocked dependency version<br>
 Severity: Informational<br>
 File(s) affected: package.json<br>
 Description<br>
