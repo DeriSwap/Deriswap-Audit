@@ -38,15 +38,15 @@ On L106 it is noted: "// XXX DO NOT add the same LP token more than once. Reward
 If a token is mistakenly added more than once, it would reset the rewards variables associated with the token (e.g., accDeriPerShare).
 
 Recommendation
-This could be prevented by creating a mapping from addresses to booleans, such that LP tokens get mapped to true once they've been added. The function could then have a require-statement preventing the same LP token from being added twice.
-<Br>
+This could be prevented by creating a mapping from addresses to booleans, such that LP tokens get mapped to true once they've been added. The function could then have a require-statement preventing the same LP token from being added twice.<br>
+<br>
 3.2. migrate() is dependent on a currently unspecified migrator contract<br>
 Severity: Low<br>
 Contract(s) affected: Master.sol<br>
 Description<br>
 Migrator can be set to any contract, potentially allowing the theft of funds, particularly if the owner's private key is compromised. The migrator can be set at any time (and multiple times) by the owner. In the worst case, this could be set to a contract that transfers all underlying LP tokens to an arbitrary address.
 <br>
-Note: since the owner is a timelock contract, users would have 2 days to mass exit the pool before the change could occur.
+Note: since the owner is a timelock contract, users would have 2 days to mass exit the pool before the change could occur.<br>
 <br>
 3.3. massUpdatePools() may run out-of-gas if too many tokens are added<br>
 Severity: Low<br>
