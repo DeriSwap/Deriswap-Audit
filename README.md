@@ -29,7 +29,6 @@ Documentation: Deriswap Medium Article<br>
 <br>
 No critical or high risk issues were found. Although we provide some recommendations for fixes below, since the contracts are already deployed, these are primarily for informational purposes. No found issues were critical enough to suggest re-deployment of the existing contracts, however caution should be used when using them.<br>
 <br>
-<br>
 3.1. add() does not prevent the same LP token from being added more than once
 Severity: Low
 Contract(s) affected: Master.sol
@@ -40,7 +39,7 @@ If a token is mistakenly added more than once, it would reset the rewards variab
 
 Recommendation
 This could be prevented by creating a mapping from addresses to booleans, such that LP tokens get mapped to true once they've been added. The function could then have a require-statement preventing the same LP token from being added twice.
-
+<Br>
 3.2. migrate() is dependent on a currently unspecified migrator contract<br>
 Severity: Low<br>
 Contract(s) affected: Master.sol<br>
@@ -72,7 +71,7 @@ In the constructors for Maker.sol, Swap.sol, and Migrator.sol, the address param
 <br>
 Recommendation<br>
 In general we recommend ensuring that address arguments are non-zero in constructor and setter functions in order to mitigate deployment issues.<br>
-
+<br>
 3.6. Unlocked dependency version<br>
 Severity: Informational<br>
 File(s) affected: package.json<br>
