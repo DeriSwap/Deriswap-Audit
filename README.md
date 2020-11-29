@@ -5,8 +5,6 @@ https://t.me/DeriswapOfficial
 <br>
 Deriswap Security Review<br>
 <br>
-
-Deriswap Security Review<br>
 <br>
 1. Summary<br>
 This document is a security review of Deriswap.<br>
