@@ -12,7 +12,8 @@ This document is a security review of Deriswap.<br>
 
 Timeline: 26/11/20 - 29/11/20<br>
 Token Name : DERI
-Token Contract : 0xd2750c6f3fadd9135c6bc15d2d0fde3b1dba8c95
+Token Contract : 0xd2750c6f3fadd9135c6bc15d2d0fde3b1dba8c95 
+https://etherscan.io/token/0xd2750c6f3fadd9135c6bc15d2d0fde3b1dba8c95
 
 Auditors:<br>
 Ed Zulkoski, Senior Research Engineer<br>
