@@ -1,4 +1,4 @@
-# Quantstamp Contract Audit
+# Contract Audit
 
 Join telegram channel for audit updates : <br>
 https://t.me/DeriswapOfficial
